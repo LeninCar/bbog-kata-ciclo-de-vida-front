@@ -36,10 +36,13 @@ function CustomersPage() {
   }
 
   useEffect(() => {
-    loadHealth();
-    loadCustomers();
-  }, []);
+    async function initPage() {
+      await loadHealth();
+      await loadCustomers();
+    }
 
+    initPage();
+  }, []);
   return (
     <main className="page">
       <header className="page-header">

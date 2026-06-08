@@ -21,6 +21,14 @@ function CustomerForm({ onCustomerCreated }) {
     event.preventDefault()
     setError("")
     setSuccess("")
+    
+    const nameRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/
+
+    if (!nameRegex.test(form.name.trim())) {
+      setError("Name must contain only letters")
+      return
+    }
+
     setLoading(true)
 
     try {
@@ -51,6 +59,9 @@ function CustomerForm({ onCustomerCreated }) {
               id="name"
               className="input"
               name="name"
+              type="text"
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
+              title="Name must contain only letters"
               placeholder="Jane Doe"
               value={form.name}
               onChange={handleChange}
