@@ -54,6 +54,7 @@ function CustomerForm({ onCustomerCreated }) {
               placeholder="Jane Doe"
               value={form.name}
               onChange={handleChange}
+              required
             />
           </div>
 
@@ -69,6 +70,7 @@ function CustomerForm({ onCustomerCreated }) {
               placeholder="jane@example.com"
               value={form.email}
               onChange={handleChange}
+              required
             />
           </div>
 

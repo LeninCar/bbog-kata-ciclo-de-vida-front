@@ -1,16 +1,52 @@
-# React + Vite
+# Customer Lifecycle Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend desarrollado con React + Vite para crear y consultar clientes consumiendo la Customer Lifecycle API.
 
-Currently, two official plugins are available:
+## Despliegues
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* DEV: https://bbog-kata-ciclo-de-vida-front.vercel.app/
+* PROD: https://bbog-kata-ciclo-de-vida-front-mr54.vercel.app/
 
-## React Compiler
+## Ejecutar localmente
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Instalar dependencias:
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Ejecutar el frontend en modo desarrollo usando las variables del ambiente DEV:
+
+```bash
+npm run dev:dev
+```
+
+Este comando usa:
+
+```bash
+vite --mode development
+```
+
+Por lo tanto, Vite carga las variables definidas en el archivo:
+
+```txt
+.env.development
+```
+
+Ejecutar el frontend en modo producción local usando las variables del ambiente PROD:
+
+```bash
+npm run dev:prod
+```
+
+Este comando usa:
+
+```bash
+vite --mode production
+```
+
+Por lo tanto, Vite carga las variables definidas en el archivo:
+
+```txt
+.env.production
+```
